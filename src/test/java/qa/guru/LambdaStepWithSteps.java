@@ -17,6 +17,7 @@ public class LambdaStepWithSteps {
     private static final String REPOSITORY = "AGordey/Homework-7-Allure";
     private static final int ISSUESNUMBER = 1;
 
+
     @Test
     public void testGithubIssueFailed() {
         SelenideLogger.addListener("allure", new AllureSelenide());
