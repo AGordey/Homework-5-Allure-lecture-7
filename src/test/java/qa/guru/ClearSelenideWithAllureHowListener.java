@@ -13,7 +13,6 @@ import static org.openqa.selenium.By.partialLinkText;
 
 public class ClearSelenideWithAllureHowListener {
 
-
     @Test
     public void testGithubIssueRight () {
         SelenideLogger.addListener("allure", new AllureSelenide());
