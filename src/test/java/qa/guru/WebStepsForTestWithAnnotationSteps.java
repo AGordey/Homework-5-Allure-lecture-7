@@ -22,7 +22,6 @@ public class WebStepsForTestWithAnnotationSteps {
         $(".header-search-input").sendKeys(repo);
         $(".header-search-input").submit();
     }
-
     @Step("Преходим из выдачи поиска искомому репозиторию: {repo}")
     public void clickOnRepositoryLink(String repo) {
         $(linkText(repo)).click();
