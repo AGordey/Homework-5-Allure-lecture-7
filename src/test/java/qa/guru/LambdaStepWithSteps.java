@@ -14,28 +14,28 @@ import static org.openqa.selenium.By.partialLinkText;
 public class LambdaStepWithSteps {
 
     private static final String REPOSITORY = "AGordey/Homework-7-Allure";
-    private static final int ISSUESNUMBER = 1 ;
+    private static final int ISSUESNUMBER = 1;
 
     @Test
-    public void testGithubIssueFailed () {
+    public void testGithubIssueFailed() {
 //        SelenideLogger.addListener("allure", new AllureSelenide());
-        step("Переход на Github", ()-> {
-        open("https://github.com");
+        step("Переход на Github", () -> {
+            open("https://github.com");
         });
-        step("Поиск репозитория с ISSUE " + REPOSITORY , ()-> {
-                    $(".header-search-input").click();
-                    $(".header-search-input").sendKeys("AGordey/Homework-7-Allure");
-                    $(".header-search-input").submit();
-                });
-        step("Преходим из выдачи поиска искомому репозиторию: " + REPOSITORY , ()-> {
-        $(linkText("AGordey/Homework-7-Allure")).click();
+        step("Поиск репозитория с ISSUE " + REPOSITORY, () -> {
+            $(".header-search-input").click();
+            $(".header-search-input").sendKeys("AGordey/Homework-7-Allure");
+            $(".header-search-input").submit();
         });
-        step("Переходим во вкладку ISSUES" , ()-> {
-        $(partialLinkText("Issues100")).click(); // добавил цифру 100 для ошибки теста
+        step("Преходим из выдачи поиска искомому репозиторию: " + REPOSITORY, () -> {
+            $(linkText("AGordey/Homework-7-Allure")).click();
         });
-            step("Поиск ISSUES с номером " + ISSUESNUMBER , ()-> {
-        $(withText("1")).click();
-            });
+        step("Переходим во вкладку ISSUES", () -> {
+            $(partialLinkText("Issues100")).click(); // добавил цифру 100 для ошибки теста
+        });
+        step("Поиск ISSUES с номером " + ISSUESNUMBER, () -> {
+            $(withText("1")).click();
+        });
     }
 }
 
