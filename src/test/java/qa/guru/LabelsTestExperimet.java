@@ -4,8 +4,6 @@ import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import java.lang.annotation.*;
-
 public class LabelsTestExperimet {
 
     @Test
