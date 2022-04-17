@@ -3,7 +3,7 @@ plugins {
     id "io.qameta.allure" version "2.9.6"
 }
 
-group 'qa.guru.allure'
+group 'qa.guru'
 version '1.0-SNAPSHOT'
 
 repositories {
