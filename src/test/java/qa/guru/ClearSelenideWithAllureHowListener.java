@@ -1,5 +1,6 @@
 package qa.guru;
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.Test;
@@ -39,7 +40,7 @@ public class ClearSelenideWithAllureHowListener {
 
         $(linkText("AGordey/Homework-7-Allure")).click();
         $(partialLinkText("Issues100")).click(); // добавил цифру 100 для ошибки теста
-        $(withText("#1")).click();
+        $(withText("#1")).should(Condition.visible);
     }
 }
 

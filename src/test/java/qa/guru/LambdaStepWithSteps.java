@@ -1,5 +1,6 @@
 package qa.guru;
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.Test;
@@ -33,8 +34,8 @@ public class LambdaStepWithSteps {
         step("Переходим во вкладку ISSUES", () -> {
             $(partialLinkText("Issues100")).click(); // добавил цифру 100 для ошибки теста
         });
-        step("Поиск ISSUES с номером " + ISSUESNUMBER, () -> {
-            $(withText("1")).click();
+        step("Поиск ISSUES с номером #" + ISSUESNUMBER, () -> {
+            $(withText("#" + ISSUESNUMBER)).should(Condition.visible);
         });
     }
 }
