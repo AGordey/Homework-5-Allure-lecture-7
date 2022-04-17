@@ -18,7 +18,7 @@ public class LambdaStepWithSteps {
 
     @Test
     public void testGithubIssueFailed() {
-//        SelenideLogger.addListener("allure", new AllureSelenide());
+        SelenideLogger.addListener("allure", new AllureSelenide());
         step("Переход на Github", () -> {
             open("https://github.com");
         });
